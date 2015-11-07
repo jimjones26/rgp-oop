@@ -29,14 +29,6 @@
                                     <constraint firstAttribute="height" constant="129" id="g6i-Ix-YNS"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chest" translatesAutoresizingMaskIntoConstraints="NO" id="Hxx-VX-lqo">
-                                <rect key="frame" x="432" y="375" width="148" height="128"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="148" id="8mj-G4-ZUD"/>
-                                    <constraint firstAttribute="height" constant="128" id="ayZ-AI-Dv8"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="print" translatesAutoresizingMaskIntoConstraints="NO" id="dnQ-bi-NVU">
                                 <rect key="frame" x="67" y="0.0" width="466" height="83"/>
                                 <animations/>
@@ -94,16 +86,27 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynX-Yq-2sH">
+                                <rect key="frame" x="450" y="393" width="112" height="110"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="MEn-SD-72Q"/>
+                                    <constraint firstAttribute="height" constant="110" id="yhf-c3-JCL"/>
+                                </constraints>
+                                <state key="normal" image="chest"/>
+                                <connections>
+                                    <action selector="onChestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pUM-fP-YJ3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Hxx-VX-lqo" secondAttribute="trailing" constant="20" id="8wp-jA-5EO"/>
-                            <constraint firstItem="yPs-dD-gzO" firstAttribute="top" secondItem="Hxx-VX-lqo" secondAttribute="bottom" id="9gh-7a-Alq"/>
                             <constraint firstItem="42U-5o-1Sd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9tE-5I-14F"/>
                             <constraint firstItem="yPs-dD-gzO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CRt-42-Yh9"/>
                             <constraint firstAttribute="trailing" secondItem="42U-5o-1Sd" secondAttribute="trailing" id="D4o-Rw-dHB"/>
                             <constraint firstItem="yPs-dD-gzO" firstAttribute="top" secondItem="rwm-X7-Z4d" secondAttribute="bottom" id="ES9-RI-LP4"/>
+                            <constraint firstAttribute="trailing" secondItem="ynX-Yq-2sH" secondAttribute="trailing" constant="38" id="Ff0-kD-cV2"/>
                             <constraint firstItem="42U-5o-1Sd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RY8-sJ-oXe"/>
                             <constraint firstItem="h2z-wy-hg5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="156" id="TaT-m7-kIB"/>
                             <constraint firstAttribute="trailing" secondItem="O3E-BN-U9g" secondAttribute="trailing" constant="156" id="XD5-N1-DVc"/>
@@ -115,12 +118,20 @@
                             <constraint firstAttribute="trailing" secondItem="yPs-dD-gzO" secondAttribute="trailing" id="mCA-L9-VQz"/>
                             <constraint firstAttribute="bottomMargin" secondItem="yPs-dD-gzO" secondAttribute="bottom" constant="-32" id="sb3-n9-HFK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ACY-Qo-tev" secondAttribute="bottom" constant="61" id="sib-AB-51G"/>
+                            <constraint firstItem="yPs-dD-gzO" firstAttribute="top" secondItem="ynX-Yq-2sH" secondAttribute="bottom" id="t9p-dQ-nBy"/>
                             <constraint firstItem="BYe-NO-eCk" firstAttribute="centerX" secondItem="dnQ-bi-NVU" secondAttribute="centerX" id="ugA-Tc-jS8"/>
                             <constraint firstItem="yPs-dD-gzO" firstAttribute="top" secondItem="h2z-wy-hg5" secondAttribute="bottom" constant="110" id="uoH-Bs-7x5"/>
                             <constraint firstItem="BYe-NO-eCk" firstAttribute="centerY" secondItem="dnQ-bi-NVU" secondAttribute="centerY" id="ySe-Mn-pNr"/>
                             <constraint firstItem="dnQ-bi-NVU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zLR-nf-3rG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chestBtn" destination="ynX-Yq-2sH" id="Kec-ve-y2h"/>
+                        <outlet property="enemyHpLbl" destination="O3E-BN-U9g" id="r0K-6S-ZWd"/>
+                        <outlet property="enemyImg" destination="ACY-Qo-tev" id="aw0-Rs-8lD"/>
+                        <outlet property="playerHpLbl" destination="h2z-wy-hg5" id="W7I-Oc-8Lb"/>
+                        <outlet property="printLbl" destination="BYe-NO-eCk" id="RrA-0P-dq5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
